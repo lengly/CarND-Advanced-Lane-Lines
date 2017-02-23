@@ -101,7 +101,7 @@ I implemented this step in Part VII in my code. Here is an example of my result 
 
 ####1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 
-Here's a [link to my video result](./project_video.mp4)
+Here's a [link to my video result](./project_video_result.mp4)
 
 ---
 
@@ -111,3 +111,4 @@ Here's a [link to my video result](./project_video.mp4)
 
 Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
 
+At first, I detect lane only by sliding window search. But I find that sometimes the result'll be affected by many reasons(maybe just a passing car). Then I detect lane by the result of last frame, it make sense. My pipeline works well in the first video. But it works bad in next two videos. Especially the third video. I still need to detect the lane when I lose the track of lanes.
